@@ -6,3 +6,8 @@ wp_enqueue_style('style', get_stylesheet_uri());
 wp_enqueue_script('JQUERY', "https://code.jquery.com/jquery-3.2.1.slim.min.js", null,null, true);
 wp_enqueue_script('POOPER', "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js", null, null, true);
 wp_enqueue_script('BOOTSTRAP-JS', get_template_directory_uri() . "/js/bootstrap.min.js", null,null, true);
+
+function register_my_menu() {
+  register_nav_menu('side-menu',__( 'Side Menu' ));
+}
+add_action( 'init', 'register_my_menu' );

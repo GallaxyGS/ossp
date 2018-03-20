@@ -5,12 +5,12 @@
 </button>
 
 <?php
-?> 
+?>
 <div class="row">
 
     <div class="col-md-3">
-        leve menu
-    </div>   
+        <?php wp_nav_menu( array( 'theme_location' => 'side-menu' ) ); ?>
+    </div>
 
     <div class="col-md-9"> <?php
 the_post();
